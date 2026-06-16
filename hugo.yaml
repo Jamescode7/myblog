@@ -1,0 +1,128 @@
+baseURL: "https://jamescode7.github.io/myblog/"
+locale: "ko-kr"
+defaultContentLanguage: "ko"
+title: "Seunghwa Dev Log"
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+pagination:
+  pagerSize: 10
+
+permalinks:
+  posts: "/posts/:slug/"
+  project: "/project/:slug/"
+  troubleshooting: "/troubleshooting/:slug/"
+  notes: "/notes/:slug/"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+params:
+  env: "production"
+  title: "Seunghwa Dev Log"
+  description: "Django, Flutter, DevOps, API 개발 과정에서 만난 문제와 해결 과정을 기록하는 기술 블로그"
+  keywords:
+    - "Django"
+    - "Flutter"
+    - "DevOps"
+    - "Troubleshooting"
+    - "Hugo"
+    - "GitHub Pages"
+  author: "Song Seunghwa"
+  DateFormat: "2006-01-02"
+  defaultTheme: "auto"
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  showtoc: true
+  tocopen: false
+  comments: false
+  mainSections:
+    - "posts"
+    - "troubleshooting"
+    - "project"
+    - "notes"
+  homeInfoParams:
+    Title: "개발 문제 해결 데이터베이스"
+    Content: "Django, Flutter, DevOps, API 운영에서 만난 문제를 원인, 해결, 결과 중심으로 기록합니다."
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/Jamescode7"
+  editPost:
+    disabled: true
+
+menu:
+  main:
+    - identifier: "posts"
+      name: "Posts"
+      url: "/posts/"
+      weight: 10
+    - identifier: "troubleshooting"
+      name: "Troubleshooting"
+      url: "/troubleshooting/"
+      weight: 20
+    - identifier: "project"
+      name: "Project"
+      url: "/project/"
+      weight: 30
+    - identifier: "notes"
+      name: "Notes"
+      url: "/notes/"
+      weight: 40
+    - identifier: "portfolio"
+      name: "Portfolio"
+      url: "/portfolio/"
+      weight: 50
+    - identifier: "search"
+      name: "Search"
+      url: "/search/"
+      weight: 60
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    lineNos: true
+    style: "github"
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  x:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true

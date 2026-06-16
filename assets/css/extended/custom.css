@@ -1,0 +1,13 @@
+:root {
+  --radius: 6px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  scroll-margin-top: 96px;
+}
+
+.post-content code {
+  border-radius: 4px;
+}
